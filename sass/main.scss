@@ -1,0 +1,44 @@
+@import "./utils/variables";
+@import "./base/reset";
+@import "./utils/hidden";
+@import "./utils/mixins";
+
+@import "./components/container";
+@import "./components/section";
+@import "./components/btn";
+
+/* HEADER ******************************************************/
+@import "./components/header";
+@import "./components/logo";
+@import "./components/navigation";
+@import "./components/contact";
+
+/* HERO *************************************************************************/
+@import "./components/hero";
+
+/* MODAL */
+@import "./components/modal";
+@import "./components/form-modal";
+
+/* SPECIFICS *********************************************************************/
+@import "./components/specifics";
+
+/* WEDO **************************************************************************/
+@import "./components/wedo";
+
+/* TEAM **************************************************************************/
+@import "./components/team";
+
+/* SOCIAL-LIST */
+@import "./components/social-link";
+
+/* customers ****************************************************************/
+@import "./components/customers";
+
+/* portfolio ****************************************************************/
+@import "./components/portfolio";
+
+/* footer ************************************************************************/
+@import "./components/footer";
+
+@import "./components/form-footer";
