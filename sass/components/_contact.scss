@@ -1,12 +1,13 @@
 .contact-header {
-  display: block;
-  margin-left: auto;
+  margin-top: auto;
+  @media (min-width: 768px) {
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+  }
 
   @include desktop {
     display: flex;
-  }
-  @include mobile {
-    display: none;
   }
 }
 
@@ -21,19 +22,42 @@
 }
 
 .contact-header__link {
-  display: flex;
-  align-items: center;
-
+  font-size: 24px;
+  line-height: 1.16;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--secondary-tex-color);
-
-  transition: color 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
+    font-size: 34px;
+    line-height: 1.17;
     color: var(--accent-color);
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    line-height: 1.16;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--secondary-tex-color);
+    &:hover,
+    &:focus {
+      font-size: 12px;
+
+      line-height: 1.16;
+
+      color: var(--accent-color);
+    }
+
+    transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
 }
 
@@ -47,5 +71,9 @@
   .contact-header__link:hover &,
   .contact-header__link:hover & {
     transform: scale(1.2);
+  }
+
+  .menu-container.opened & {
+    display: none;
   }
 }
