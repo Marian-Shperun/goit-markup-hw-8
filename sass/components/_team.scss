@@ -6,6 +6,9 @@
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 30px;
+  @include tablet {
+    justify-content: center;
+  }
 }
 
 .team__item {
@@ -18,7 +21,7 @@
   @include tablet {
     flex-basis: calc(100% / 2 - 30px);
   }
-  @include mobile {
+  @media screen and (max-width: 532px) {
     flex-basis: 100%;
   }
 }
@@ -39,4 +42,3 @@
   font-weight: normal;
   color: var(--secondary-tex-color);
 }
-
