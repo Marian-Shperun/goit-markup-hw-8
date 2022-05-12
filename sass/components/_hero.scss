@@ -9,17 +9,20 @@
   background-position: center;
 
   @include tablet {
-    max-width: 768px;
+    // max-width: 768px;
 
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   @include mobile {
-    max-width: 480px;
+    
 
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-mobile.jpg);
-    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 .hero__inner {
