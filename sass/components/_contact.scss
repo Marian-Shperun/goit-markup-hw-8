@@ -1,19 +1,19 @@
 .contact-header {
-  margin-top: auto;
-  @media (min-width: 768px) {
-    display: block;
-    margin-top: 0;
-    margin-left: auto;
-  }
-
   @include desktop {
     display: flex;
+  }
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+  @include mobile {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
   }
 }
 
 .contact-header__item:first-child {
   @include tablet {
-    margin-right: 0;
     margin-bottom: 10px;
   }
   @include desktop {
@@ -75,5 +75,30 @@
 
   .menu-container.opened & {
     display: none;
+  }
+}
+
+.contact-header__soc {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    & li:not(:last-child):after {
+      content: "";
+      padding-right: 10px;
+      border-right: 1px solid var(--accent-color);
+    }
+    & a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: var(--accent-color);
+    }
   }
 }
