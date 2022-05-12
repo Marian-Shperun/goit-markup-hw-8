@@ -70,32 +70,37 @@
 .menu {
   position: absolute;
   top: -60px;
-  right: -60px;
+  right: 0;
 
   display: none;
   width: 120px;
   height: 120px;
   margin-left: auto;
 
-  background-color: red;
+  background-color: #fff;
   border-radius: 50% 50% 50% 50%;
   border: none;
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  transform-origin: center;
   transition: 0.5s ease-in-out;
+  transition-delay: 0.2s;
+  z-index: 1;
 
   cursor: pointer;
 
   & svg {
     position: absolute;
     top: 70px;
-    left: 0px;
-    z-index: 70;
+    right: 15px;
+    z-index: 2;
   }
 
   .menu-container.opened + & {
     background-color: #fff;
     box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
     border-radius: 0;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
   }
   @include mobile {
     display: block;
