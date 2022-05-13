@@ -18,6 +18,10 @@
   @include mobile {
     flex-basis: 100%;
   }
+  @media screen and (min-width: 512px) and (max-width: 767px) {
+    max-width: 226px;
+    flex-basis: content;
+  }
 }
 
 .specifics__icon {

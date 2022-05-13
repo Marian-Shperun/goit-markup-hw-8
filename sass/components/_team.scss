@@ -21,8 +21,11 @@
   @include tablet {
     flex-basis: calc(100% / 2 - 30px);
   }
-  @media screen and (max-width: 532px) {
+  @media screen and (max-width:480px) {
     flex-basis: 100%;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    max-width: calc(100% / 2 - 30px);
   }
 }
 
