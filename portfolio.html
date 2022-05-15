@@ -29,17 +29,58 @@
         <a class="logo header__logo" href="./index.html" lang="en"
           >Web<span class="header__logo--black">Studio</span></a
         >
+        <!-- nav -->
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html">Студия</a>
+            </li>
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__link--current"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#footer" title="контакти"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact-header">
+          <li class="contact-header__item">
+            <a class="contact-header__link" href="mailto:info@devstudio.com">
+              <svg class="contact-header__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contact-header__item">
+            <a class="contact-header__link" href="tel:+380961111111">
+              <svg class="contact-header__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+
         <div class="menu-container" data-menu>
           <!-- nav -->
-          <nav class="navigation">
+          <nav class="navigation menu-container__navigation">
             <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="./index.html">Студия</a>
-              </li>
               <li class="navigation__item">
                 <a
                   class="navigation__link navigation__link--current"
-                  href="./portfolio.html"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="./portfolio.html"
                   >Портфолио</a
                 >
               </li>
@@ -50,7 +91,7 @@
               </li>
             </ul>
           </nav>
-          <ul class="contact-header">
+          <ul class="contact-header menu-container__contact-header">
             <li class="contact-header__item">
               <a class="contact-header__link" href="mailto:info@devstudio.com">
                 <svg class="contact-header__icon" width="16" height="12">
@@ -89,6 +130,11 @@
             />
           </svg>
         </button>
+        <!-- <button class="menu" data-menu-button aria-label="Main Menu">
+          <svg class="icon-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button> -->
       </div>
     </header>
     <!-- main -->
@@ -123,20 +169,36 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img.jpg"
-                    width="370"
-                    height="294"
-                    alt="Технокряк"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img.jpg    1x,
+                        ./images/porfolio/img-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-tablet.jpg    1x,
+                        ./images/porfolio/img-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-mob.jpg    1x,
+                        ./images/porfolio/img-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img src="./images/porfolio/img-mob.jpg" alt="Технокряк" />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name">Технокряк</h3>
@@ -148,20 +210,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-1.jpg"
-                    width="370"
-                    height="294"
-                    alt="Постер Новый Орлеан против Золотой Звезды"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-1.jpg    1x,
+                        ./images/porfolio/img-1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-1-tablet.jpg    1x,
+                        ./images/porfolio/img-1-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-1-mob.jpg    1x,
+                        ./images/porfolio/img-1-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-1-mob.jpg"
+                      alt="Постер Новый Орлеан против Золотой Звезды"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="ru en">
@@ -175,20 +256,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-2.jpg"
-                    width="370"
-                    height="294"
-                    alt="Ресторан Морепродукты"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-2.jpg    1x,
+                        ./images/porfolio/img-2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-2-tablet.jpg    1x,
+                        ./images/porfolio/img-2-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-2-mob.jpg    1x,
+                        ./images/porfolio/img-2-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-2-mob.jpg"
+                      alt="Ресторан Морепродукты"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="ru en">
@@ -202,20 +302,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-3.jpg"
-                    width="370"
-                    height="294"
-                    alt="Проект основной"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-3.jpg    1x,
+                        ./images/porfolio/img-3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-3-tablet.jpg    1x,
+                        ./images/porfolio/img-3-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-3-mob.jpg    1x,
+                        ./images/porfolio/img-3-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-3-mob.jpg"
+                      alt="Проект основной"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="ru en">
@@ -229,20 +348,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-4.jpg"
-                    width="370"
-                    height="294"
-                    alt="Проект Коробки"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-4.jpg    1x,
+                        ./images/porfolio/img-4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-4-tablet.jpg    1x,
+                        ./images/porfolio/img-4-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-4-mob.jpg    1x,
+                        ./images/porfolio/img-4-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-4-mob.jpg"
+                      alt="Проект Коробки"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="ru en">
@@ -256,20 +394,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-5.jpg"
-                    width="370"
-                    height="294"
-                    alt="Вдохновение не имеет границ"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-5.jpg    1x,
+                        ./images/porfolio/img-5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-5-tablet.jpg    1x,
+                        ./images/porfolio/img-5-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-5-mob.jpg    1x,
+                        ./images/porfolio/img-5-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-5-mob.jpg"
+                      alt="Вдохновение не имеет границ"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="en">
@@ -283,20 +440,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-6.jpg"
-                    width="370"
-                    height="294"
-                    alt="Издание Ограниченный выпуск"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-6.jpg    1x,
+                        ./images/porfolio/img-6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-6-tablet.jpg    1x,
+                        ./images/porfolio/img-6-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-6-mob.jpg    1x,
+                        ./images/porfolio/img-6-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-6-mob.jpg"
+                      alt="Издание Ограниченный выпуск"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="ru en">
@@ -310,20 +486,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-7.jpg"
-                    width="370"
-                    height="294"
-                    alt="Проект LAB"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-7.jpg    1x,
+                        ./images/porfolio/img-7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-7-tablet.jpg    1x,
+                        ./images/porfolio/img-7-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-7-mob.jpg    1x,
+                        ./images/porfolio/img-7-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-7-mob.jpg"
+                      alt="Проект LAB"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name">Проект LAB</h3>
@@ -335,20 +530,39 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="img-wrapper">
-                  <img
-                    src="./images/porfolio/img-8.jpg"
-                    width="370"
-                    height="294"
-                    alt="Растущий бизнес"
-                  />
-                  <div class="portfolio-overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем
-                      функционала и сервисов. Все это позволит посетителю
-                      получить исчерпывающие сведения о компании или частном
-                      лице.
-                    </p>
-                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-8.jpg    1x,
+                        ./images/porfolio/img-8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-8-tablet.jpg    1x,
+                        ./images/porfolio/img-8-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-8-mob.jpg    1x,
+                        ./images/porfolio/img-8-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-8-mob.jpg"
+                      alt="Растущий бизнес"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
                 </div>
                 <div class="portfolio-content">
                   <h3 class="portfolio-content__name" lang="en">

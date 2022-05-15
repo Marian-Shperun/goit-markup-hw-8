@@ -32,12 +32,53 @@
         <a class="logo header__logo" href="./index.html" lang="en"
           >Web<span class="header__logo--black">Studio</span></a
         >
+        <!-- nav -->
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__link--current"
+                href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#footer" title="контакти"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact-header">
+          <li class="contact-header__item">
+            <a class="contact-header__link" href="mailto:info@devstudio.com">
+              <svg class="contact-header__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contact-header__item">
+            <a class="contact-header__link" href="tel:+380961111111">
+              <svg class="contact-header__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        
         <div class="menu-container" data-menu>
           <!-- nav -->
-          <nav class="navigation">
+          <nav class="navigation menu-container__navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--current" href="./index.html"
+                <a
+                  class="navigation__link navigation__link--current"
+                  href="./index.html"
                   >Студия</a
                 >
               </li>
@@ -53,7 +94,7 @@
               </li>
             </ul>
           </nav>
-          <ul class="contact-header">
+          <ul class="contact-header menu-container__contact-header">
             <li class="contact-header__item">
               <a class="contact-header__link" href="mailto:info@devstudio.com">
                 <svg class="contact-header__icon" width="16" height="12">
@@ -91,7 +132,6 @@
               d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
             />
           </svg>
-          
         </button>
         <!-- <button class="menu" data-menu-button aria-label="Main Menu">
           <svg class="icon-burger" width="40" height="40">
