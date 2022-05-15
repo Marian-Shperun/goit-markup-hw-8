@@ -1204,9 +1204,9 @@ input:-webkit-autofill:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 480px) {
   .customers__link {
-    padding: 16px 31px;
+    padding: 16px 20px;
   }
 }
 
