@@ -1,12 +1,13 @@
 .portfolio-menu {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+
   flex-wrap: wrap;
   row-gap: 15px;
   margin-bottom: 50px;
 
-  @include mobile {
-    justify-content: start;
+  @include desktop {
+    justify-content: center;
   }
 }
 
@@ -15,13 +16,25 @@
 }
 
 .portfolio__list {
-  display: flex;
-  column-gap: 30px;
-  row-gap: 30px;
-  flex-wrap: wrap;
+  @media (max-width: 767px) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  @include tablet {
+    display: flex;
+    max-width: 738px;
+    margin: 0 auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 .portfolio__item {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 30px) / 2);
   transition: box-shadow 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -30,11 +43,14 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  @include tablet {
-    flex-basis: calc((100% - 60px) / 2);
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
-  @include mobile {
-    flex-basis: 100%;
+
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 
@@ -62,6 +78,11 @@
   justify-content: center;
   align-items: center;
   padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: #fff;
 
   background-color: rgba(33, 150, 243, 0.9);
 
@@ -70,12 +91,9 @@
   transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  & p {
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-
-    color: #fff;
+  @media screen and (max-width: 360px) {
+    font-size: 15px;
+    padding: 24px ;
   }
 
   .img-wrapper:hover & {

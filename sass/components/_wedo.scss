@@ -1,17 +1,18 @@
 .wedo {
   padding-top: 0;
-
-  @include tablet {
-    display: none;
+  display: none;
+  @include desktop {
+    display: block;
   }
 }
 .wedo__list {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 30px;
-  // margin-right: -30px;
-  // margin-top: -30px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    // margin-right: -30px;
+    // margin-top: -30px;
+  
 }
 .wedo__item {
   position: relative;

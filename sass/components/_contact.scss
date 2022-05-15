@@ -1,19 +1,25 @@
 .contact-header {
+  display: none;
+
   @include desktop {
     display: flex;
   }
-  @media (min-width: 768px) {
+  @include tablet {
+    display: block;
     margin-left: auto;
   }
-  @include mobile {
-    position: absolute;
-    left: 40px;
-    bottom: 20px;
-    padding-bottom: 48px;
+  @include desktop {
+    display: flex;
   }
+}
+.menu-container__contact-header {
+  display: block;
+  padding-bottom: 48px;
 }
 
 .contact-header__item:first-child {
+  margin-bottom: 32px;
+
   @include tablet {
     margin-bottom: 10px;
   }
@@ -28,35 +34,29 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--secondary-tex-color);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     font-size: 34px;
     line-height: 1.17;
     color: var(--accent-color);
   }
-  @media (min-width: 768px) {
+
+  @include tablet {
     display: flex;
     align-items: center;
-
     font-size: 12px;
     line-height: 1.16;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: var(--secondary-tex-color);
+
     &:hover,
     &:focus {
       font-size: 12px;
-
       line-height: 1.16;
-
-      color: var(--accent-color);
-    }
-
-    transition: color 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
       color: var(--accent-color);
     }
   }
@@ -80,26 +80,22 @@
 }
 
 .contact-header__soc {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  column-gap: 10px;
+  row-gap: 10px;
 
-  @include mobile {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 60px;
-    column-gap: 10px;
-    row-gap: 10px;
-
-    & li:not(:last-child):after {
-      content: "";
-      padding-right: 10px;
-      border-right: 1px solid var(--accent-color);
-    }
-    & a {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 1.22;
-      letter-spacing: 0.02em;
-      color: var(--accent-color);
-    }
+  & li:not(:last-child):after {
+    content: "";
+    padding-right: 10px;
+    border-right: 1px solid var(--accent-color);
+  }
+  & a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
   }
 }

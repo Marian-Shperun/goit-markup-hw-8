@@ -1,27 +1,31 @@
 .navigation {
-  @media (min-width: 768px) {
+  display: none;
+
+  @include tablet {
     display: flex;
     align-items: center;
   }
-  @include mobile {
-    position: absolute;
-    left: 40px;
-  }
+  // @include mobile {
+  //   position: absolute;
+  //   left: 40px;
+  // }
+}
+.menu-container__navigation {
+  display: block;
 }
 .navigation__list {
-  @media (min-width: 768px) {
+  @include tablet {
+    // некоректно працює мобільне меню якщо задати df без медіа запиту ???
     display: flex;
   }
 }
 
 .navigation__item {
-  @media (min-width: 768px) {
-    position: relative;
-    margin-right: 50px;
+  position: relative;
+  margin-right: 50px;
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
   }
 }
 
@@ -31,7 +35,11 @@
   font-size: 40px;
   color: var(--primary-tex-color);
 
-  @media (min-width: 768px) {
+  // @include mobile {
+  //   position: absolute;
+  //   left: 40px;
+  // }
+  @include tablet {
     padding-top: 32px;
     font-size: 14px;
     font-weight: 500;
@@ -51,7 +59,7 @@
 }
 
 .navigation__link::after {
-  @media (min-width: 768px) {
+  @include tablet {
     content: "";
     display: block;
     opacity: 0;
@@ -71,7 +79,7 @@
 .navigation__link:focus::after {
   opacity: 1;
 }
-@media (min-width: 768px) {
+@include tablet {
   .navigation__link.navigation__link--current::after {
     opacity: 1;
   }

@@ -1,26 +1,30 @@
 .logo {
   font-family: $Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  padding: 16px 0;
   color: var(--accent-color);
 
-  @include tablet {
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.2;
   }
 }
 
 .header__logo {
-  margin-right: 93px;
+  display: block;
+  margin-right: 88px;
+  padding: 16px 0;
+
   &--black {
     color: #000000;
   }
 
-  @include mobile {
-    margin-right: 88px;
-    padding: 16px 0;
+  @include desktop {
+    margin-right: 93px;
+    padding: 0;
   }
 }
 
