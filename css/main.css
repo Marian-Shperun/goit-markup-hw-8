@@ -601,6 +601,11 @@ input:-webkit-autofill:active {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+@media screen and (max-width: 479px) {
+  .contact-header__soc a {
+    font-size: 15px;
+  }
+}
 
 /* HERO *************************************************************************/
 .hero {
