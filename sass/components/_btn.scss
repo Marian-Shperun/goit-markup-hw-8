@@ -79,7 +79,7 @@
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
   transform-origin: center;
   transition: 0.5s ease-in-out;
-  transition-delay: 0.2s;
+  transition-delay: 0.4s;
   z-index: 1;
 
   cursor: pointer;
@@ -89,10 +89,16 @@
   }
 
   .menu-container.opened + & {
+    // position: absolute;
+    // top: 10px;
+    // right: 15px;
+
+    
     background-color: #fff;
     box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
     border-radius: 0;
     z-index: 1;
+
     transition: 0.5s ease-in-out;
   }
   @include tablet {

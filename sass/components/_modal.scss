@@ -15,7 +15,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 528px;
+  max-width: 450px;
   width: 100%;
   padding: 40px;
 
@@ -28,8 +28,8 @@
   transition: transform 0.6s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  @include tablet {
-    max-width: 450px;
+  @include desktop {
+    max-width: 528px;
   }
 }
 
@@ -75,8 +75,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s, visibility 0.6s;
-
-  
-}.modal-scroll {
+}
+.modal-scroll {
   overflow: hidden;
 }

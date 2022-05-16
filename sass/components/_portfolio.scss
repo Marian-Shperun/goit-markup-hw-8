@@ -6,7 +6,7 @@
   row-gap: 15px;
   margin-bottom: 50px;
 
-  @include desktop {
+  @include tablet {
     justify-content: center;
   }
 }

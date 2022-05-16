@@ -14,7 +14,7 @@
 }
 .menu-container__contact-header {
   display: block;
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .contact-header__item:first-child {
@@ -25,6 +25,7 @@
   }
   @include desktop {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -39,8 +40,10 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    font-size: 34px;
-    line-height: 1.17;
+    @media screen and (max-width: 767px) {
+      font-size: 34px;
+      line-height: 1.17;
+    }
     color: var(--accent-color);
   }
 
@@ -48,21 +51,16 @@
     display: flex;
     align-items: center;
     font-size: 12px;
-    line-height: 1.16;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: var(--secondary-tex-color);
-
-    &:hover,
-    &:focus {
-      font-size: 12px;
-      line-height: 1.16;
-      color: var(--accent-color);
-    }
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
 .contact-header__icon {
+  display: none;
+
   fill: currentColor;
   margin-right: 10px;
 
@@ -70,12 +68,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   .contact-header__link:hover &,
-  .contact-header__link:hover & {
+  .contact-header__link:focus & {
     transform: scale(1.2);
   }
 
-  .menu-container.opened & {
-    display: none;
+  @include tablet {
+    display: block;
   }
 }
 

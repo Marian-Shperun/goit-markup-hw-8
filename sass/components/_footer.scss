@@ -23,7 +23,9 @@
     flex: 0 1 50%;
   }
   @include desktop {
+
     margin-right: 70px;
+    margin-bottom: 0;
     flex: 0;
   }
 }
@@ -36,6 +38,12 @@
   @include desktop {
     flex: 0;
   }
+}
+
+.address {
+    width: 231px;
+    margin: 0 auto;
+
 }
 .address,
 .address__link {

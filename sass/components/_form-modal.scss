@@ -75,7 +75,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 
@@ -107,7 +107,7 @@
     text-decoration: underline;
   }
 
-  @include tablet {
-    font-size: 12px;
+  @include desktop {
+    font-size: 14px;
   }
 }

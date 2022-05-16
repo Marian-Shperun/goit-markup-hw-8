@@ -32,17 +32,14 @@
 .navigation__link {
   display: inline-block;
   padding-bottom: 32px;
+  font-weight: 500;
   font-size: 40px;
   color: var(--primary-tex-color);
 
-  // @include mobile {
-  //   position: absolute;
-  //   left: 40px;
-  // }
   @include tablet {
     padding-top: 32px;
-    font-size: 14px;
     font-weight: 500;
+    font-size: 14px;
     letter-spacing: 0.02em;
 
     transition: color 250ms;

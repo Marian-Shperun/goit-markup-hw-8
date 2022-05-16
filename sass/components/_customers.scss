@@ -1,35 +1,37 @@
 .customers__list {
   display: flex;
-  justify-content: center;
+  // justify-content: space-between;
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 30px;
-  @include tablet {
-    width: 738px;
-    margin: 0 auto;
-  }
-  @include desktop {
-    width: 100%;
-  }
 }
-
-// .customers-item + .customers-item {
-//   margin-left: 30px;
-// }
 
 .customers__item {
-  max-width: calc(100% / 2 - 30px);
-
+  width: 44%;
+  @include mobile {
+    width: 210px;
+  }
+  @include tablet {
+    width: 226px;
+  }
   @include desktop {
-    flex-basis: calc(100% / 6 - 30px);
+    width: 170px;
   }
 }
 
+// .customers__item {
+//   max-width: calc(100% / 2 - 30px);
+
+//   @include desktop {
+//     flex-basis: calc(100% / 6 - 30px);
+//   }
+// }
+
 .customers__link {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 16px 53px;
+
+  padding: 16px 52px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -44,10 +46,62 @@
     border: 1px solid var(--accent-color);
     transform: scale(1.1);
   }
-
   @include desktop {
+    padding: 16px 31px;
   }
-  @media screen and (max-width: 480px) {
-    padding: 16px 20px;
+  @media screen and (max-width: 479px) {
+    padding: 16px 0;
   }
 }
+// .customers__list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   column-gap: 30px;
+//   row-gap: 30px;
+//   // @include tablet {
+//   //   width: 738px;
+//   //   margin: 0 auto;
+//   // }
+//   // @include desktop {
+//   //   width: 100%;
+//   // }
+// }
+
+// .customers-item + .customers-item {
+//   margin-right: 30px;
+// }
+
+// .customers__item {
+//   max-width: calc(100% / 2 - 30px);
+
+//   @include desktop {
+//     flex-basis: calc(100% / 6 - 30px);
+//   }
+// }
+
+// .customers__link {
+//   display: inline-flex;
+//   justify-content: center;
+//   width: 100%;
+//   padding: 16px 52px;
+
+//   border: 1px solid #afb1b8;
+//   border-radius: 4px;
+//   fill: var(--icon-color);
+
+//   transition: all 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &:hover,
+//   &:focus {
+//     fill: var(--accent-color);
+//     border: 1px solid var(--accent-color);
+//     transform: scale(1.1);
+//   }
+//   @include desktop {
+//     padding: 16px 31px;
+//   }
+//   @media screen and (max-width: 379px) {
+//     padding: 16px 4px;
+//   }
+// }

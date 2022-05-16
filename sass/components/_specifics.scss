@@ -5,16 +5,10 @@
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 30px;
-  @media screen and (min-width: 610px) and (max-width: 1199px) {
-    max-width: 738px;
-    margin: 0 auto;
-  }
- 
 }
 .specifics__item {
   flex-basis: 100%;
   //  max-width:  calc(100% / 2 - 30px);
-
   // height: 100px;
   // overflow: auto;
 
@@ -22,9 +16,6 @@
     flex-basis: 354px;
   }
 
-  @media screen and (min-width: 569px) and (max-width: 767px) {
-    flex-basis: calc(100% / 2 - 30px);
-  }
   @include desktop {
     flex-basis: calc(100% / 4 - 30px);
   }
