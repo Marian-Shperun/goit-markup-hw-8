@@ -768,10 +768,6 @@ input:-webkit-autofill:active {
   transition: opacity 0.6s, visibility 0.6s;
 }
 
-.modal-scroll {
-  overflow: hidden;
-}
-
 /* form */
 .modal-from {
   margin-top: 12px;
