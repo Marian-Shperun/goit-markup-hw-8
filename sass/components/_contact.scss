@@ -14,7 +14,10 @@
 }
 .menu-container__contact-header {
   display: block;
-  padding-bottom: 48px;
+  padding-bottom: 70px;
+  @include mobile {
+    padding-bottom: 48px;
+  }
 }
 
 .contact-header__item:first-child {
@@ -91,12 +94,12 @@
   }
   & a {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
-    // @media screen and (max-width: 479px) {
-    //   font-size: 15px;
-    // }
+    @include mobile {
+      font-size: 18px;
+    }
   }
 }

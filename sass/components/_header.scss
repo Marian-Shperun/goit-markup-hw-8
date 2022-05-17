@@ -4,5 +4,6 @@
 .header__container {
   display: flex;
   align-items: center;
+  // max-width: 100%;  // щоб кнопра menu розміщалась в правому куті
 }
 @import "./menu-container";
