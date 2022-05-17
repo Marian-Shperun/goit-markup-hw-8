@@ -334,7 +334,7 @@ input:-webkit-autofill:active {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     height: calc(100vh - 48px);
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
@@ -621,7 +621,7 @@ input:-webkit-autofill:active {
 }
 .contact-header__soc a {
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
