@@ -870,7 +870,7 @@ input:-webkit-autofill:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--secondary-tex-color);
@@ -898,6 +898,11 @@ input:-webkit-autofill:active {
   margin-left: 5px;
   color: var(--accent-color);
   text-decoration: underline;
+}
+@media screen and (min-width: 480px) {
+  .checkbox-label {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .checkbox-label {
